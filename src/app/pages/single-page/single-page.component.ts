@@ -7,12 +7,4 @@ import { ActivatedRoute, ParamMap, Route } from '@angular/router';
   styleUrls: ['./single-page.component.css']
 })
 export class SinglePageComponent {
-  constructor(private _route:ActivatedRoute){}
-
-  ngOnInit(){
-    this._route.paramMap.subscribe((params:ParamMap)=>{
-      console.log(params.get("id"))   
-    })
-  }
-
 }
