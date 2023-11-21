@@ -11,7 +11,7 @@ export class SinglePageComponent {
 
   ngOnInit(){
     this._route.paramMap.subscribe((params:ParamMap)=>{
-      console.log(params.get("id"))
+      console.log(params.get("id"))   
     })
   }
 
