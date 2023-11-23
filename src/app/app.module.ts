@@ -8,11 +8,9 @@ import { SinglePageComponent } from './pages/single-page/single-page.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './pages/main-page/sharepage/navbar/navbar.component';
-import { FooterComponent } from './pages/main-page/sharepage/footer/footer.component';
-import { HomeComponent } from './pages/main-page/home/home.component';
-import { DataService } from './service/data.service';
 
+import { MealService } from './service/meal.service';
+import { ContainerComponent } from './pages/single-page/container/container.component';
 
 
 @NgModule({
@@ -20,19 +18,15 @@ import { DataService } from './service/data.service';
     AppComponent,
     MainPageComponent,
     SinglePageComponent,
-    NavbarComponent,
-    FooterComponent,
-    HomeComponent,
-   
+    ContainerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    
+    FormsModule
   ],
-  providers: [DataService],
+  providers: [MealService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
