@@ -27,6 +27,7 @@ import { DataService } from 'src/app/service/data.service';
           console.log(result, 'search result');
           this.searchResults = result.meals || [];
         });
+        
       } else { 
         this.searchResults = [];
       }
