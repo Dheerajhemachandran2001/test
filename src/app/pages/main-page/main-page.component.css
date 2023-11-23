@@ -1,0 +1,26 @@
+
+  .search-container{
+    position: relative;
+    border: 2px solid rgb(46, 46, 50);
+    border-radius: 50px;
+    /* padding: 2px; */
+    height: fit-content;
+    padding: 6px;
+  }
+  .search-input{
+    outline: none;
+    border: none;
+  }
+  .button-custom{
+    position: absolute;
+    right: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .card:hover {
+    transform: scale(1.2);
+    transition: transform .2s;
+    background-color: rgb(120, 118, 116);
+
+  }

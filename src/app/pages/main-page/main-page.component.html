@@ -1,2 +1,24 @@
-<p>main-page changes</p>
-<p>main-page no </p>
+<div>
+  <div class="d-flex justify-content-between p-4" >
+    <h2 style="font-size: 60px;">HapPy EatiNg</h2> 
+    <div class="search-container mt-4">
+      <input type="search" class="search-input" placeholder="foOd" [(ngModel)]="searchQuery" (keyup.enter)="search()">
+      <button class="button-custom" (click)="search()"><img src="../../../assets/img/search.png" width="20px" height=""></button>
+    </div>
+  </div>
+
+  <div class="image d-flex justify-content-center" *ngIf="searchResults.length === 0">
+    <img src="../../../assets/img/istockphoto-1457889029-1024x1024.jpg" width="800px" height="300px" alt="Placeholder Image">
+  </div>
+
+  <div class="container" *ngIf="searchResults.length > 0">
+    <div class="row">
+      <div class="col-6 col-md-4 col-lg-3 mb-5" *ngFor="let result of searchResults">
+        <div class="card" style="width: 10rem; cursor:pointer; " [routerLink]="result.idMeal">
+        <img [src]="result.strMealThumb" class="card-img-top" alt="...">
+        <div class="card-body"> <h5 class="" style="font-size: 0.9rem;">{{ result.strMeal }}</h5> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
