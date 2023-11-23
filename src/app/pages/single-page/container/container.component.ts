@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MealService } from 'src/app/service/meal.service';
+import { Router } from '@angular/router';
 
 interface MealDetails {
   meals: {
@@ -23,7 +24,7 @@ interface MealDetails {
 export class ContainerComponent implements OnInit {
   mealDetails: MealDetails = { meals: [] };
 
-  constructor(private mealService:MealService, private route: ActivatedRoute) {}
+  constructor(private mealService:MealService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     let mealId: any;
@@ -60,6 +61,12 @@ export class ContainerComponent implements OnInit {
 
     if (link) {
       link.style.backgroundColor = isHovered ? '#cc0000' : '#ff0000';
+    }
+  }
+
+  openYoutubeLink(youtubeLink: string | undefined): void {
+    if (youtubeLink) {
+      window.open(youtubeLink, '_self');
     }
   }
 }

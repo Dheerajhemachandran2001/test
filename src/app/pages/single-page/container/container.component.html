@@ -16,12 +16,9 @@
                     <p>{{ mealDetails.meals[0]?.strInstructions }}</p>
                 </div>
             </div>
-            <!--<div class="instructions">
-        <h2>Instructions:</h2>
-        <p>{{ mealDetails.meals[0]?.strInstructions }}</p>
-      </div>-->
             <div class="youtube-link">
-                <a [href]="mealDetails.meals[0]?.strYoutube" target="_blank" class="youtube-button">
+                <!--<a [href]="mealDetails.meals[0]?.strYoutube"  target="_self" class="youtube-button">-->
+                    <a (click)="openYoutubeLink(mealDetails.meals[0]?.strYoutube)" class="youtube-button">
                     <img src="assets/you.png" alt="YouTube Logo" class="youtube-logo">
                 </a>
             </div>
